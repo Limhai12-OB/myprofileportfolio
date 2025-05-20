@@ -13,7 +13,7 @@ export default function ProjectSec() {
       title: "TVC Movie Entertainment",
       description:
         "This is a description of an amazing project with cutting-edge features and stunning design.",
-      imageUrl: "./src/assets/projectMovie.png",
+      imageUrl: "https://i.imghippo.com/files/kGAJ4606VZs.png",
       tags: ["React", "Tailwind"],
       githubUrl: "https://github.com/Limhai12-OB/MovieProjectForFinal",
       demoUrl: "https://tvcmovieintertaiment.vercel.app/",
@@ -25,7 +25,7 @@ export default function ProjectSec() {
       title: "Cambotrip",
       description:
         "Cambotrip is a website that allows users to look for the best travel destination in Cambodia. ( still in progress )",
-      imageUrl: "./src/assets/Cambo.png",
+      imageUrl: "https://i.imghippo.com/files/yLFj7037CDo.png",
       tags: ["React", "Tailwind"],
       githubUrl: "https://github.com/Limhai12-OB/Final-Project",
       demoUrl: "https://cambotrip-limhais-projects.vercel.app/",
@@ -37,7 +37,7 @@ export default function ProjectSec() {
       title: "Awesome Project",
       description:
         "This is a description of an amazing project with cutting-edge features and stunning design.",
-      imageUrl: "./src/assets/projectMovie.png",
+      imageUrl: "https://i.imghippo.com/files/kGAJ4606VZs.png",
       tags: ["React", "Tailwind", "Node.js"],
       githubUrl: "https://github.com/Limhai12-OB/MovieProjectForFinal",
       demoUrl: "https://tvcmovieintertaiment.vercel.app/",

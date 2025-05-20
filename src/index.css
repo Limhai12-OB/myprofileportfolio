@@ -2,13 +2,13 @@
 @import "tailwindcss";
 :root {
   background-color: rgb(8, 0, 8);
-  background-image: url(/src/assets/bg.webp);
+  background-image: url("https://i.imghippo.com/files/Ob4716TeY.webp");
   color: white;
   font-family: "Poppins", sans-serif;
 }
 
 .bg-image {
-  background-image: url(/src/assets/bg.webp);
+  background-image: url("https://i.imghippo.com/files/Ob4716TeY.webp");
 }
 
 @keyframes floatUpDown {

@@ -88,7 +88,7 @@ export default function AboutMe() {
             <img
               data-aos="fade-right"
               data-aos-easing="ease-in-sine"
-              src="./src/assets/AM.jpg"
+              src="https://i.imghippo.com/files/pBJ4667LeY.jpg"
               alt="Profile"
               className="rounded-lg w-64 h-64 object-cover border-4 border-blue-100"
             />

@@ -149,7 +149,11 @@ export default function HeadPage() {
               </p>
             </div>
             <div className=" order-3 xl:order-2 xl:w-[500px] lg:w-[450px] sm:w-[400px] xl:-ml-4 mx-auto  drop-shadow-lg drop-shadow-cyan-500/80">
-              <img src="../src/assets/Nhom.png" alt="Me" className=" " />
+              <img
+                src="https://i.imghippo.com/files/lPr9151Dno.png"
+                alt="Me"
+                className=" "
+              />
               <button className="absolute  -mt-28 ml-52 hidden xl:block animate-bounce drop-shadow-cyan-500/80">
                 <ArrowDown
                   onClick={scrollToMe}
