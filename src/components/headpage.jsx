@@ -50,28 +50,31 @@ export default function HeadPage() {
 
   return (
     <>
-      <main className="bg-cover bg-image bg-center">
+      <main className="bg-cover bg-image bg-center w-full ">
         <header className="fixed top-0 left-0 right-0 z-50 mx-auto max-w-7xl px-6 py-4 flex flex-wrap justify-between items-center w-full bg-black/30 backdrop-blur-sm rounded-xl">
           {/* Logo */}
           <a
-            className="text-5xl font-bold hover:text-blue-500 transition-colors duration-300"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl hover:text-blue-500 transition-colors duration-300"
             href="#"
             onClick={scrollToTop}
           >
             Portfolio
           </a>
           {/* Bar for mb */}
-          <button className="md:hidden" onClick={() => setmenuOpen(!menuOpen)}>
+          <button
+            className="md:hidden flex-shrink-0 text-white hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2"
+            onClick={() => setmenuOpen(!menuOpen)}
+          >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
           {/* Navigation */}
           <nav
-            className={`w-full md:w-auto md:block mt-5 md:mt-0 transition-all duration-500 ease-in-out overflow-hidden
+            className={`w-full md:w-auto lg:flex-1 lg:flex lg:justify-center md:flex md:items-center transition-all duration-500 ease-in-out overflow-hidden
               ${
                 menuOpen
                   ? "max-h-64 opacity-100"
-                  : "max-h-0 md:max-h-56  opacity-100"
+                  : "max-h-0 md:max-h-56  opacity-0  md:opacity-100"
               }
               `}
           >

@@ -10,17 +10,3 @@
 .bg-image {
   background-image: url("https://i.imghippo.com/files/Ob4716TeY.webp");
 }
-
-@keyframes floatUpDown {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.float-up-down {
-  animation: floatUpDown 2s ease-in-out infinite;
-}
