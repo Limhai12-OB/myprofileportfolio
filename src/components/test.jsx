@@ -6,11 +6,10 @@ import {
   MapPin,
   NotebookPen,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import Aos from "aos";
-import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
 
-export default function AboutMe() {
+export default function Test() {
   const [ActiveTab, setActiveTab] = useState("experinces");
   useEffect(() => {
     Aos.init({
@@ -69,9 +68,39 @@ export default function AboutMe() {
     },
     { institution: "CSTAD", degree: "Web Design ", period: "2025" },
   ];
-
   return (
     <>
+      {/* <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 sm:mb-24 lg:mb-32 mt-32 sm:mt-40 lg:mt-56 ">
+          <h1 className="text-2xl font-bold uppercase text-center ">
+            About Me
+          </h1>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center gap-5 ">
+          <img
+            className="w-48 h-48"
+            src="https://i.imghippo.com/files/pBJ4667LeY.jpg"
+            alt=""
+          />
+          <div>
+            <h1>{personalInfo.name}</h1>
+            <h2>{personalInfo.title}</h2>
+            <p>{personalInfo.bio}</p>
+            <div className="flex flex-wrap">
+              <div>
+                <span>{personalInfo.location}</span>
+              </div>
+              <div>
+                <span>{personalInfo.email}</span>
+              </div>
+              <div>
+                <span>{personalInfo.availableDate}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main> */}
       <main id="aboutMe" className=" max-w-7xl mx-auto">
         <div className="mb-16 sm:mb-24 lg:mb-32 mt-32 sm:mt-40 lg:mt-56">
           <h1
