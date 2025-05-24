@@ -1,12 +1,13 @@
 import { ArrowDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+import "aos/dist/aos.css";
 
 export default function HeadPage() {
   const [menuOpen, setmenuOpen] = useState(false);
 
   const scrollToMe = (event) => {
     event.preventDefault();
-    const AboutMe = document.getElementById("aboutMe");
+    const AboutMe = document.getElementById("AboutMe");
     if (AboutMe) {
       const headerOffset = -30;
       window.scrollTo({
@@ -106,6 +107,11 @@ export default function HeadPage() {
                   Projects
                 </a>
               </li>
+              <li className="md:hidden block">
+                <a href="#contactMe" onClick={scrollToContactMe}>
+                  ContactMe
+                </a>
+              </li>
               <li>
                 <a
                   href="tel:+85570694862"
@@ -136,11 +142,7 @@ export default function HeadPage() {
             </h1>
           </div>
           <div className="grid xl:grid-cols-3 grid-cols-1 xl:absolute xl:mt-96 -mt-72  ">
-            <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="mt-96 text-xl p-5"
-            >
+            <div data-aos="fade-right" className="mt-96 text-xl p-5">
               <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[450px] ">
                 Greetings, Welcome to my Portfolio WebPage{" "}
               </p>
