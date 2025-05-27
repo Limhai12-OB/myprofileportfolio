@@ -82,7 +82,8 @@ export default function AboutMe() {
             data-aos="fade-right"
             data-aos-duration="800"
             className="w-64 h-64 rounded-lg object-cover border-4 border-blue-200 shadow-lg"
-            src="https://i.imghippo.com/files/pBJ4667LeY.jpg"
+            src="https://i.imghippo.com/files/pftw6430Sk.jpg"
+            // src="https://i.imghippo.com/files/pBJ4667LeY.jpg"
             alt=""
           />
           <div
