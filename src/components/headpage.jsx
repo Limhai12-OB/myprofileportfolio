@@ -1,6 +1,7 @@
 import { ArrowDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import "aos/dist/aos.css";
+import DemoPage from "./darklight";
 
 export default function HeadPage() {
   const [menuOpen, setmenuOpen] = useState(false);
@@ -52,8 +53,7 @@ export default function HeadPage() {
   return (
     <>
       <main className="bg-cover bg-image bg-center w-full ">
-        <header className="fixed top-0 left-0 right-0 z-50 mx-auto max-w-7xl px-6 py-4 flex flex-wrap justify-between items-center w-full bg-black/30 backdrop-blur-sm rounded-xl">
-          {/* Logo */}
+        <header className="fixed top-0 left-0 right-0 z-50 mx-auto max-w-7xl  px-6 py-4 flex flex-wrap justify-between items-center w-full bg-black/30 backdrop-blur-sm rounded-xl">
           <a
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl hover:text-blue-500 transition-colors duration-300"
             href="#"
@@ -61,7 +61,7 @@ export default function HeadPage() {
           >
             Portfolio
           </a>
-          {/* Bar for mb */}
+
           <button
             className="md:hidden flex-shrink-0 text-white hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2"
             onClick={() => setmenuOpen(!menuOpen)}
@@ -69,12 +69,11 @@ export default function HeadPage() {
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          {/* Navigation */}
           <nav
             className={`w-full md:w-auto lg:flex-1 lg:flex lg:justify-center md:flex md:items-center transition-all duration-500 ease-in-out overflow-hidden
               ${
                 menuOpen
-                  ? "max-h-64 opacity-100"
+                  ? "max-h-72 opacity-100"
                   : "max-h-0 md:max-h-56  opacity-0  md:opacity-100"
               }
               `}
@@ -120,21 +119,28 @@ export default function HeadPage() {
                   +85570694862
                 </a>
               </li>
+              <li>
+                <DemoPage />
+              </li>
             </ul>
           </nav>
 
-          {/* Contact Button */}
-          <button
-            onClick={scrollToContactMe}
-            className="hidden md:block px-4 py-2 rounded-lg text-white bg-purple-600 border border-purple-500 shadow-md hover:bg-purple-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400"
-          >
-            Contact Me
-          </button>
+          <div className="flex items-center gap-5 ">
+            <button
+              onClick={scrollToContactMe}
+              className="cursor-pointer hidden md:block px-4 py-2 rounded-lg text-white bg-purple-600 border border-purple-500 shadow-md hover:bg-purple-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            >
+              Contact Me
+            </button>
+            <div className="hidden md:block ">
+              <DemoPage />
+            </div>
+          </div>
         </header>
         <section className="flex flex-col items-center justify-center min-h-screen xl:-mt-6 lg:mt-44 md:mt-56 mt-44 ">
           <div className="text-center xl:mb-56 xl:relative">
             <h1 className="xl:text-9xl md:text-8xl sm:text-6xl text-5xl p-2 font-bold text-white tracking-wide">
-              I AM A <span className="text-blue-600">FRONTEND</span>
+              I AM A <span className="text-blue-600">\ </span>
               <br />
               <span className="xl:text-8xl text-red-700 font-extrabold scale-bounce">
                 DEVELOPER

@@ -10,3 +10,18 @@
 .bg-image {
   background-image: url("https://i.imghippo.com/files/Ob4716TeY.webp");
 }
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition: all 0.3s ease;
+}
+
+.card {
+  background-color: var(--theme-card);
+  border: 1px solid var(--theme-border);
+}
+
+.accent {
+  color: var(--theme-accent);
+}
