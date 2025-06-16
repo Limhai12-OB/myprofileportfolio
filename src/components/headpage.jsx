@@ -186,9 +186,9 @@ export default function HeadPage() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center ">
             {/* Left Content */}
-            <div className="lg:order-1 order-2 space-y-4">
+            <div className="lg:order-1 order-2 space-y-4 mt-15">
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white">
                 <p className="text-lg">
                   Greetings, Welcome to my Portfolio WebPage
@@ -211,9 +211,14 @@ export default function HeadPage() {
             <div className="lg:order-2 order-1 flex justify-center relative">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[400px] lg:h-[400px]">
                 <div className="w-full h-full bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
-                  <div className="w-4/5 h-4/5 bg-white rounded-full flex items-center justify-center text-6xl font-bold text-blue-600">
+                  {/* <div className="w-4/5 h-4/5 bg-white rounded-full flex items-center justify-center text-6xl font-bold text-blue-600">
                     TL
-                  </div>
+                  </div> */}
+                  <img
+                    src="https://i.imghippo.com/files/lPr9151Dno.png"
+                    alt="Me"
+                    className="w-96 bg-center object-contain  rounded-full flex items-center justify-center  font-bold text-blue-600 "
+                  />
                 </div>
                 {/* Arrow Button */}
                 <button
