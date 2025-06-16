@@ -4,35 +4,52 @@ export default function ContactSec() {
   return (
     <>
       <main id="contact" className="max-w-7xl mx-auto">
-        <section className=" mt-44 mb-10 p-16 rounded-2xl  bg-white/10 backdrop-blur-2xl">
+        <section
+          className=" mt-44 mb-10 xl:p-16 lg:p-12 p-6 rounded-2xl  bg-white/10 backdrop-blur-2xl"
+          style={{ backgroundColor: "var(--theme-bg-footer)" }}
+        >
           <div
             data-aos="fade-up"
             className="flex flex-col items-center justify-center mb-30"
           >
-            <h1 className="text-4xl font-bold uppercase text-gray-100 mb-6">
+            <h1
+              className="text-4xl font-bold uppercase text-gray-100 mb-6"
+              style={{ color: "var(--theme-text-black)" }}
+            >
               Contact Me
             </h1>
-            <p className="text-gray-400 text-center">
+            <p
+              className="text-gray-400 text-center"
+              style={{ color: "var(--theme-text-black)" }}
+            >
               If you have any questions or comments, please feel free to contact
               me.
             </p>
           </div>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
             <div data-aos="fade-right">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="mb-5">
-                  <label htmlFor="firstName" className="text-gray-300">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="xl:mb-5 md-0">
+                  <label
+                    htmlFor="firstName"
+                    className="text-gray-300"
+                    style={{ color: "var(--theme-text-black)" }}
+                  >
                     First Name
                   </label>
                   <input
                     id="firstName"
-                    className="w-full p-2 rounded-md bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    className="w-full  p-2 rounded-md bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
                     type="text"
                     placeholder="First Name"
                   />
                 </div>
                 <div className="mb-5">
-                  <label htmlFor="lastName" className="text-gray-300">
+                  <label
+                    htmlFor="lastName"
+                    className="text-gray-300"
+                    style={{ color: "var(--theme-text-black)" }}
+                  >
                     Last Name
                   </label>
                   <input
@@ -44,7 +61,11 @@ export default function ContactSec() {
                 </div>
               </div>
               <div className="mb-5">
-                <label htmlFor="email" className="text-gray-300">
+                <label
+                  htmlFor="email"
+                  className="text-gray-300"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   Email
                 </label>
                 <input
@@ -55,7 +76,11 @@ export default function ContactSec() {
                 />
               </div>
               <div className="mb-5">
-                <label htmlFor="phone" className="text-gray-300">
+                <label
+                  htmlFor="phone"
+                  className="text-gray-300"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   Phone Number
                 </label>
                 <input
@@ -66,7 +91,11 @@ export default function ContactSec() {
                 />
               </div>
               <div className="mb-5">
-                <label htmlFor="message" className="text-gray-300">
+                <label
+                  htmlFor="message"
+                  className="text-gray-300"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   Message
                 </label>
                 <textarea
@@ -77,10 +106,17 @@ export default function ContactSec() {
                 ></textarea>
               </div>
             </div>
-            <div data-aos="fade-left" className="px-14 text-gray-100">
+            <div
+              data-aos="fade-left"
+              className="p-4 text-gray-100"
+              style={{ color: "var(--theme-text-black)" }}
+            >
               <div className="mb-5">
                 <h2 className="text-2xl font-bold mb-4">Chat with me</h2>
-                <p className="text-gray-400">
+                <p
+                  className="text-gray-400"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   I'm always here to help you. If you have any questions or
                   comments, please feel free to contact me.
                 </p>
@@ -92,6 +128,7 @@ export default function ContactSec() {
                     href="https://www.facebook.com/share/1BondqMGmN/?mibextid=wwXIfr"
                     target="_blank"
                     className="underline text-gray-200"
+                    style={{ color: "var(--theme-text-black)" }}
                   >
                     Facebook
                   </a>
@@ -102,6 +139,7 @@ export default function ContactSec() {
                     href="https://t.me/Try_Limhai"
                     target="_blank"
                     className="underline text-gray-200"
+                    style={{ color: "var(--theme-text-black)" }}
                   >
                     Telegram
                   </a>
@@ -109,7 +147,10 @@ export default function ContactSec() {
               </div>
               <div className="mb-4">
                 <h2 className="text-2xl font-medium mb-2">Call Us</h2>
-                <p className="text-gray-400 mb-2">
+                <p
+                  className="text-gray-400 mb-2"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   I am available for a call. Please feel free to contact me.
                 </p>
                 <div className="flex items-center gap-2">
@@ -117,6 +158,7 @@ export default function ContactSec() {
                   <a
                     href="tel:+85570694862"
                     className="underline text-gray-200"
+                    style={{ color: "var(--theme-text-black)" }}
                   >
                     +855 70694862
                   </a>
@@ -124,12 +166,18 @@ export default function ContactSec() {
               </div>
               <div className="mb-4">
                 <h2 className="text-2xl font-medium mb-2">Visit Me</h2>
-                <p className="text-gray-400 mb-2">
+                <p
+                  className="text-gray-400 mb-2"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   I am available for a visit. Please feel free to contact me.
                 </p>
                 <div className="flex items-center gap-2">
                   <LocationEdit size={20} className="text-red-400" />
-                  <span className="underline text-gray-200">
+                  <span
+                    className="underline text-gray-200"
+                    style={{ color: "var(--theme-text-black)" }}
+                  >
                     Phnom Penh, Cambodia
                   </span>
                 </div>

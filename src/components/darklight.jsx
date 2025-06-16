@@ -29,22 +29,25 @@ const TroggleDarkLight = ({
       body.className = body.className.replace(/bg-\S+/g, "");
       body.classList.add(
         "bg-gradient-to-br",
-        "from-gray-900",
-        "via-purple-900",
-        "to-gray-800"
+        "from-gray-100",
+        "via-purple-100",
+        "to-white"
       );
 
       root.style.setProperty(
         "--theme-bg",
         "linear-gradient(to bottom right, #111827, #581c87, #1f2937)"
       );
-      root.style.setProperty("--theme-text", "#DFD0B8");
+
+      root.style.setProperty("--theme-text-black", "#1A1A1D");
       root.style.setProperty("--theme-card", "rgba(75, 85, 99, 0.3)");
       root.style.setProperty("--theme-card-hover", "rgba(75, 85, 99, 0.5)");
-      root.style.setProperty("--theme-border", "rgba(147, 51, 234, 0.3)");
+      root.style.setProperty("--theme-border", "#3C3D37");
       root.style.setProperty("--theme-accent", "#a855f7");
       root.style.setProperty("--theme-accent-hover", "#9333ea");
       root.style.setProperty("--theme-shadow", "rgba(147, 51, 234, 0.2)");
+      root.style.setProperty("--theme-button", "#ECDFCC");
+      root.style.setProperty("--theme-bg-footer", "rgba(0, 0, 0, 0.1)");
     } else {
       root.classList.add("little-dark");
       root.classList.remove("dark");
@@ -54,13 +57,15 @@ const TroggleDarkLight = ({
 
       root.style.setProperty("--theme-bg", "");
       root.style.setProperty("--theme-text", "#88304E");
-      root.style.setProperty("--theme-text-navbar", "#");
+      root.style.setProperty("--theme-text-black", "#DCD7C9");
       root.style.setProperty("--theme-card", "#374151");
       root.style.setProperty("--theme-card-hover", "#4b5563");
-      root.style.setProperty("--theme-border", "#6b7280");
+      root.style.setProperty("--theme-border", "#03346E");
       root.style.setProperty("--theme-accent", "#60a5fa");
       root.style.setProperty("--theme-accent-hover", "#3b82f6");
       root.style.setProperty("--theme-shadow", "rgba(96, 165, 250, 0.2)");
+      root.style.setProperty("--theme-button", "#1A1A1D");
+      root.style.setProperty("--theme-bg-footer", "rgba(255, 255, 255, 0.1)");
     }
     if (onThemeChange) {
       onThemeChange(isDark ? "dark" : "little-dark");

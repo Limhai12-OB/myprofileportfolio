@@ -10,7 +10,7 @@ import AboutMe from "./components/aboutme";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="">
+    <div>
       <HeadPage />
       <AboutMe />
       <ProjectSec />

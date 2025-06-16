@@ -1,5 +1,6 @@
 import { ArrowDown, Contact, Menu, X } from "lucide-react";
 import { useState } from "react";
+import DemoPage from "./darklight";
 
 export default function HeadPage() {
   const [menuOpen, setmenuOpen] = useState(false);
@@ -51,7 +52,7 @@ export default function HeadPage() {
   return (
     <main className="bg-image bg-center">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md shadow-lg">
+      <header className="fixed top-1 left-0 right-0 z-50 bg-black/10 backdrop-blur-md shadow-lg">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
@@ -59,6 +60,7 @@ export default function HeadPage() {
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white hover:text-blue-500 transition-colors duration-300"
               href="#"
               onClick={scrollToTop}
+              style={{ color: "var(--theme-text-black)" }}
             >
               Portfolio
             </a>
@@ -67,6 +69,7 @@ export default function HeadPage() {
             <button
               className="md:hidden text-white hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2"
               onClick={() => setmenuOpen(!menuOpen)}
+              style={{ color: "var(--theme-text-black)" }}
             >
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -77,6 +80,7 @@ export default function HeadPage() {
                 href="#aboutMe"
                 className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
                 onClick={scrollToMe}
+                style={{ color: "var(--theme-text-black)" }}
               >
                 About Me
               </a>
@@ -84,6 +88,7 @@ export default function HeadPage() {
                 href="#aboutMe"
                 className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
                 onClick={scrollToMe}
+                style={{ color: "var(--theme-text-black)" }}
               >
                 Skills
               </a>
@@ -91,12 +96,14 @@ export default function HeadPage() {
                 href="#projects"
                 className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
                 onClick={scrollToProjects}
+                style={{ color: "var(--theme-text-black)" }}
               >
                 Projects
               </a>
               <a
                 href="tel:+85570694862"
                 className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                style={{ color: "var(--theme-text-black)" }}
               >
                 +85570694862
               </a>
@@ -165,11 +172,13 @@ export default function HeadPage() {
               </button>
             </nav>
           </div>
-        </div>
-      </header>
-
+        </div>{" "}
+      </header>{" "}
+      <div className="fixed top-16 left-0 right-0  z-50 ">
+        <DemoPage />
+      </div>
       {/* Hero Section */}
-      <section className="pt-16 md:pt-20 min-h-screen flex items-center mt-15">
+      <section className="pt-16 md:pt-20 min-h-screen flex items-center ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
           {/* Main Hero Content */}
           <div className="text-center mb-8 lg:mb-16">
@@ -190,18 +199,27 @@ export default function HeadPage() {
             {/* Left Content */}
             <div className="lg:order-1 order-2 space-y-4 mt-15">
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white">
-                <p className="text-lg">
+                <p
+                  className="text-lg"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   Greetings, Welcome to my Portfolio WebPage
                 </p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:ml-6">
-                <p className="text-lg">
+                <p
+                  className="text-lg"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   I'm Try Limhai, 19 years old, and I am pursuing a degree in
                   CS.
                 </p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:ml-12">
-                <p className="text-lg">
+                <p
+                  className="text-lg"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   As a Second Year Student at Norton University.
                 </p>
               </div>
@@ -236,17 +254,28 @@ export default function HeadPage() {
             {/* Right Content */}
             <div className="lg:order-3 order-3 space-y-4">
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white">
-                <p className="text-lg">
+                <p
+                  className="text-lg"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   Have made some projects with React, HTML, JavaScript, CSS
                 </p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:mr-6">
-                <p className="text-lg">
+                <p
+                  className="text-lg"
+                  style={{ color: "var(--theme-text-black)" }}
+                >
                   Want to be a good developer, programmer.
                 </p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:mr-12">
-                <p className="text-lg">Used to build projects with APIs.</p>
+                <p
+                  className="text-lg "
+                  style={{ color: "var(--theme-text-black)" }}
+                >
+                  Used to build projects with APIs.
+                </p>
               </div>
             </div>
           </div>
