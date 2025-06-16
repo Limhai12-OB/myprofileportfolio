@@ -51,7 +51,7 @@ export default function ProjectSec() {
     <>
       <section
         id="projects"
-        className="max-w-7xl mx-auto mt-44 mb-10 p-6 bg-cover bg-image bg-center"
+        className="mx-auto max-w-7xl mt-44 mb-10 p-6 bg-cover bg-image text-white bg-center"
       >
         <div>
           <h1

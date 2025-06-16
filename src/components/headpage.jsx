@@ -1,7 +1,5 @@
-import { ArrowDown, Menu, X } from "lucide-react";
+import { ArrowDown, Contact, Menu, X } from "lucide-react";
 import { useState } from "react";
-import "aos/dist/aos.css";
-import DemoPage from "./darklight";
 
 export default function HeadPage() {
   const [menuOpen, setmenuOpen] = useState(false);
@@ -13,6 +11,18 @@ export default function HeadPage() {
       const headerOffset = -30;
       window.scrollTo({
         top: AboutMe.offsetTop - headerOffset,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToContactMe = (event) => {
+    event.preventDefault();
+    const contactME = document.getElementById("contact");
+    if (contactME) {
+      const headSet = 100;
+      window.scrollTo({
+        top: contactME.offsetTop - headSet,
         behavior: "smooth",
       });
     }
@@ -30,18 +40,6 @@ export default function HeadPage() {
     }
   };
 
-  const scrollToContactMe = (event) => {
-    event.preventDefault();
-    const contactMe = document.getElementById("contactMe");
-    if (contactMe) {
-      const headerOffset = 100;
-      window.scrollTo({
-        top: contactMe.offsetTop - headerOffset,
-        behavior: "smooth",
-      });
-    }
-  };
-
   const scrollToTop = (event) => {
     event.preventDefault();
     window.scrollTo({
@@ -51,146 +49,214 @@ export default function HeadPage() {
   };
 
   return (
-    <>
-      <main className="bg-cover bg-image bg-center w-full ">
-        <header className="fixed top-0 left-0 right-0 z-50 mx-auto max-w-7xl  px-6 py-4 flex flex-wrap justify-between items-center w-full bg-black/30 backdrop-blur-sm rounded-xl">
-          <a
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl hover:text-blue-500 transition-colors duration-300"
-            href="#"
-            onClick={scrollToTop}
-          >
-            Portfolio
-          </a>
+    <main className="bg-image bg-center">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md shadow-lg">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo */}
+            <a
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white hover:text-blue-500 transition-colors duration-300"
+              href="#"
+              onClick={scrollToTop}
+            >
+              Portfolio
+            </a>
 
-          <button
-            className="md:hidden flex-shrink-0 text-white hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2"
-            onClick={() => setmenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden text-white hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2"
+              onClick={() => setmenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
 
-          <nav
-            className={`w-full md:w-auto lg:flex-1 lg:flex lg:justify-center md:flex md:items-center transition-all duration-500 ease-in-out overflow-hidden
-              ${
-                menuOpen
-                  ? "max-h-72 opacity-100"
-                  : "max-h-0 md:max-h-56  opacity-0  md:opacity-100"
-              }
-              `}
-          >
-            <ul className="flex flex-col md:flex-row justify-center gap-6 text-gray-300 py-2 md:py-0">
-              <li>
-                <a
-                  href="#aboutMe"
-                  className="hover:text-blue-500 transition-colors duration-300"
-                  onClick={scrollToMe}
-                >
-                  About Me
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#aboutMe"
-                  className="hover:text-blue-500 transition-colors duration-300"
-                  onClick={scrollToMe}
-                >
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="hover:text-blue-500 transition-colors duration-300"
-                  onClick={scrollToProjects}
-                >
-                  Projects
-                </a>
-              </li>
-              <li className="md:hidden block">
-                <a href="#contactMe" onClick={scrollToContactMe}>
-                  ContactMe
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+85570694862"
-                  className="hover:text-blue-500 transition-colors duration-300"
-                >
-                  +85570694862
-                </a>
-              </li>
-              <li>
-                <DemoPage />
-              </li>
-            </ul>
-          </nav>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <a
+                href="#aboutMe"
+                className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                onClick={scrollToMe}
+              >
+                About Me
+              </a>
+              <a
+                href="#aboutMe"
+                className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                onClick={scrollToMe}
+              >
+                Skills
+              </a>
+              <a
+                href="#projects"
+                className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                onClick={scrollToProjects}
+              >
+                Projects
+              </a>
+              <a
+                href="tel:+85570694862"
+                className="text-gray-100 hover:text-blue-500 transition-colors duration-300"
+              >
+                +85570694862
+              </a>
+            </nav>
 
-          <div className="flex items-center gap-5 ">
+            {/* Contact Button - Desktop */}
             <button
               onClick={scrollToContactMe}
-              className="cursor-pointer hidden md:block px-4 py-2 rounded-lg text-white bg-purple-600 border border-purple-500 shadow-md hover:bg-purple-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="hidden md:block px-4 py-2 rounded-lg text-white bg-purple-600 border border-purple-500 shadow-md hover:bg-purple-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400"
             >
               Contact Me
             </button>
-            <div className="hidden md:block ">
-              <DemoPage />
-            </div>
           </div>
-        </header>
-        <section className="flex flex-col items-center justify-center min-h-screen xl:-mt-6 lg:mt-44 md:mt-56 mt-44 ">
-          <div className="text-center xl:mb-56 xl:relative">
-            <h1 className="xl:text-9xl md:text-8xl sm:text-6xl text-5xl p-2 font-bold text-white tracking-wide">
-              I AM A <span className="text-blue-600">\ </span>
+
+          {/* Mobile Navigation */}
+          <div
+            className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+              menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <nav className="py-4 space-y-4">
+              <a
+                href="#aboutMe"
+                className="block text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                onClick={(e) => {
+                  scrollToMe(e);
+                  setmenuOpen(false);
+                }}
+              >
+                About Me
+              </a>
+              <a
+                href="#aboutMe"
+                className="block text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                onClick={(e) => {
+                  scrollToMe(e);
+                  setmenuOpen(false);
+                }}
+              >
+                Skills
+              </a>
+              <a
+                href="#projects"
+                className="block text-gray-100 hover:text-blue-500 transition-colors duration-300"
+                onClick={(e) => {
+                  scrollToProjects(e);
+                  setmenuOpen(false);
+                }}
+              >
+                Projects
+              </a>
+              <a
+                href="tel:+85570694862"
+                className="block text-gray-100 hover:text-blue-500 transition-colors duration-300"
+              >
+                +85570694862
+              </a>
+              <button
+                onClick={(e) => {
+                  scrollToContactMe(e);
+                  setmenuOpen(false);
+                }}
+                className="w-full text-left px-4 py-2 rounded-lg text-white bg-purple-600 border border-purple-500 shadow-md hover:bg-purple-700 transition-all duration-300"
+              >
+                Contact Me
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="pt-16 md:pt-20 min-h-screen flex items-center mt-15">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+          {/* Main Hero Content */}
+          <div className="text-center mb-8 lg:mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white tracking-wide leading-tight">
+              I AM A{" "}
+              <span className="text-blue-600 inline-block transform -skew-x-12">
+                \
+              </span>
               <br />
-              <span className="xl:text-8xl text-red-700 font-extrabold scale-bounce">
+              <span className="text-red-500 font-extrabold animate-pulse block mt-2">
                 DEVELOPER
               </span>
             </h1>
           </div>
-          <div className="grid xl:grid-cols-3 grid-cols-1 xl:absolute xl:mt-96 -mt-72  ">
-            <div data-aos="fade-right" className="mt-96 text-xl p-5">
-              <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[450px] ">
-                Greetings, Welcome to my Portfolio WebPage{" "}
-              </p>
-              <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[400px] mt-5 xl:ml-12">
-                I'm Try Limhai, 19 years old, and I am pursuing a degree in CS.{" "}
-              </p>
-              <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[350px] mt-5 xl:ml-24">
-                As a Second Year Student at Norton University .{" "}
-              </p>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+            {/* Left Content */}
+            <div className="lg:order-1 order-2 space-y-4">
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white">
+                <p className="text-lg">
+                  Greetings, Welcome to my Portfolio WebPage
+                </p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:ml-6">
+                <p className="text-lg">
+                  I'm Try Limhai, 19 years old, and I am pursuing a degree in
+                  CS.
+                </p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:ml-12">
+                <p className="text-lg">
+                  As a Second Year Student at Norton University.
+                </p>
+              </div>
             </div>
-            <div className=" order-3 xl:order-2 xl:w-[500px] lg:w-[450px] sm:w-[400px] xl:-ml-4 mx-auto  drop-shadow-lg drop-shadow-cyan-500/80">
-              <img
-                src="https://i.imghippo.com/files/lPr9151Dno.png"
-                alt="Me"
-                className=" "
-              />
-              <button className="absolute  -mt-28 ml-52 hidden xl:block animate-bounce drop-shadow-cyan-500/80">
-                <ArrowDown
+
+            {/* Center Image */}
+            <div className="lg:order-2 order-1 flex justify-center relative">
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[400px] lg:h-[400px]">
+                <div className="w-full h-full bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
+                  <div className="w-4/5 h-4/5 bg-white rounded-full flex items-center justify-center text-6xl font-bold text-blue-600">
+                    TL
+                  </div>
+                </div>
+                {/* Arrow Button */}
+                <button
                   onClick={scrollToMe}
-                  className=" bg-black/50 rounded-4xl p-3 cursor-pointer"
-                  size={50}
-                />
-              </button>
+                  className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block"
+                >
+                  <ArrowDown
+                    className="bg-black/50 rounded-full p-3 cursor-pointer text-white hover:bg-black/70 transition-colors"
+                    size={50}
+                  />
+                </button>
+              </div>
             </div>
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              className="order-2 xl:order-2 xl:mt-96  text-xl p-5 xl:-ml-10"
-            >
-              <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[450px] ">
-                Have made some projects with React,Html,JavaScript,CSS{" "}
-              </p>
-              <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[400px] mt-5 ">
-                Want to be a good developer, programmer.{" "}
-              </p>
-              <p className="bg-white/20 p-3 rounded-2xl text-center xl:w-[350px] mt-5 ">
-                used to built project with API .{" "}
-              </p>
+
+            {/* Right Content */}
+            <div className="lg:order-3 order-3 space-y-4">
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white">
+                <p className="text-lg">
+                  Have made some projects with React, HTML, JavaScript, CSS
+                </p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:mr-6">
+                <p className="text-lg">
+                  Want to be a good developer, programmer.
+                </p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl text-center text-white lg:mr-12">
+                <p className="text-lg">Used to build projects with APIs.</p>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-    </>
+
+          {/* Mobile Arrow Button */}
+          <div className="flex justify-center mt-8 lg:hidden">
+            <button onClick={scrollToMe} className="animate-bounce">
+              <ArrowDown
+                className="bg-black/50 rounded-full p-3 cursor-pointer text-white hover:bg-black/70 transition-colors"
+                size={40}
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

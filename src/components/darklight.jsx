@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
 const TroggleDarkLight = ({
@@ -38,7 +38,7 @@ const TroggleDarkLight = ({
         "--theme-bg",
         "linear-gradient(to bottom right, #111827, #581c87, #1f2937)"
       );
-      root.style.setProperty("--theme-text", "#ffffff");
+      root.style.setProperty("--theme-text", "#DFD0B8");
       root.style.setProperty("--theme-card", "rgba(75, 85, 99, 0.3)");
       root.style.setProperty("--theme-card-hover", "rgba(75, 85, 99, 0.5)");
       root.style.setProperty("--theme-border", "rgba(147, 51, 234, 0.3)");
@@ -53,7 +53,8 @@ const TroggleDarkLight = ({
       body.classList.add("bg-gray-800");
 
       root.style.setProperty("--theme-bg", "");
-      root.style.setProperty("--theme-text", "#e5e7eb");
+      root.style.setProperty("--theme-text", "#88304E");
+      root.style.setProperty("--theme-text-navbar", "#");
       root.style.setProperty("--theme-card", "#374151");
       root.style.setProperty("--theme-card-hover", "#4b5563");
       root.style.setProperty("--theme-border", "#6b7280");

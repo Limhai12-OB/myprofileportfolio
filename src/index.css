@@ -25,3 +25,12 @@ body {
 .accent {
   color: var(--theme-accent);
 }
+
+.my-element {
+  background-color: #4b5563; /* little-dark default */
+  transition: all 0.3s;
+}
+
+.dark .my-element {
+  background-color: rgba(75, 85, 99, 0.3); /* dark theme */
+}

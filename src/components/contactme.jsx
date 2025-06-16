@@ -3,8 +3,8 @@ import { FacebookIcon, LocationEdit, PhoneCall, Send } from "lucide-react";
 export default function ContactSec() {
   return (
     <>
-      <main id="contactMe">
-        <section className="max-w-7xl mx-auto mt-44 mb-10 p-6">
+      <main id="contact" className="max-w-7xl mx-auto">
+        <section className=" mt-44 mb-10 p-16 rounded-2xl  bg-white/10 backdrop-blur-2xl">
           <div
             data-aos="fade-up"
             className="flex flex-col items-center justify-center mb-30"
