@@ -147,7 +147,7 @@ export default function AboutMe() {
               className={`py-2 cursor-pointer ${
                 ActiveTab === "experinces"
                   ? " text-blue-600 font-bold  border-blue-600 "
-                  : "text-yellow-700"
+                  : "text-blue-600"
               }`}
             >
               Experince
@@ -157,7 +157,7 @@ export default function AboutMe() {
               className={`py-2 cursor-pointer  ${
                 ActiveTab === "skills"
                   ? "text-blue-600 font-bold"
-                  : "text-yellow-700"
+                  : "text-blue-600"
               }`}
             >
               Skills
@@ -167,7 +167,7 @@ export default function AboutMe() {
               className={`py-2 cursor-pointer  ${
                 ActiveTab === "education"
                   ? "text-blue-600 font-bold"
-                  : "text-yellow-700"
+                  : "text-blue-600"
               }`}
             >
               Education

@@ -1,11 +1,4 @@
-import {
-  Github,
-  ExternalLink,
-  Star,
-  Users,
-  Calendar,
-  User,
-} from "lucide-react";
+import { Github, ExternalLink, Star, Calendar, User } from "lucide-react";
 
 export default function ProjectSec() {
   const projects = [
@@ -34,13 +27,13 @@ export default function ProjectSec() {
       contributors: 1,
     },
     {
-      title: "Awesome Project",
+      title: "Weather Check",
       description:
-        "This is a description of an amazing project with cutting-edge features and stunning design.",
-      imageUrl: "https://i.imghippo.com/files/kGAJ4606VZs.png",
-      tags: ["React", "Tailwind", "Node.js"],
-      githubUrl: "https://github.com/Limhai12-OB/MovieProjectForFinal",
-      demoUrl: "https://tvcmovieintertaiment.vercel.app/",
+        "This will let you to check the real Weather all of your city or country all around the world",
+      imageUrl: "https://i.imghippo.com/files/Oao5424Ick.png",
+      tags: ["React", "Tailwind"],
+      githubUrl: "https://github.com/Limhai12-OB/WeatherCheck",
+      demoUrl: "https://weather-check-cd93zrg0g-limhais-projects.vercel.app/",
       stars: 128,
       lastUpdated: "May 2025",
       contributors: 12,

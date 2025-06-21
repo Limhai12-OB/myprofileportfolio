@@ -1,4 +1,12 @@
-import { ArrowDown, Contact, Menu, X } from "lucide-react";
+import {
+  ArrowDown,
+  ClipboardList,
+  Contact,
+  FolderKanban,
+  House,
+  Menu,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import DemoPage from "./darklight";
 
@@ -52,7 +60,7 @@ export default function HeadPage() {
   return (
     <main className="bg-image bg-center">
       {/* Header */}
-      <header className="fixed top-1 left-0 right-0 z-50 bg-black/10 backdrop-blur-md shadow-lg">
+      <header className="fixed top-1 left-0 right-0 z-50 bg-black/10 backdrop-blur-md shadow-lg md:block hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
@@ -174,9 +182,35 @@ export default function HeadPage() {
           </div>
         </div>{" "}
       </header>{" "}
-      <div className="fixed top-16 left-0 right-0  z-50 ">
-        <DemoPage />
+      <div className="block md:hidden ">
+        <main className="fixed top-50 flex items-center justify-center  z-50 w-[70px] mx-auto bg-black/20 rounded-2xl backdrop-blur-md text-center py-5">
+          <div className=" ">
+            <div className="">
+              <a onClick={scrollToTop} className="" href="">
+                <House size={28} />
+              </a>
+            </div>
+            <div className="mt-3">
+              <a onClick={scrollToMe} className="">
+                <ClipboardList size={28} />
+              </a>
+            </div>
+            <div className="mt-3">
+              <a onClick={scrollToProjects} href="">
+                <FolderKanban size={28} />
+              </a>
+            </div>
+            <div className="mt-3">
+              <a onClick={scrollToContactMe} href="">
+                <Contact size={28} />
+              </a>
+            </div>
+          </div>
+        </main>
       </div>
+      {/* <div className="fixed top-16 left-0 right-0  z-50 ">
+        <DemoPage />
+      </div> */}
       {/* Hero Section */}
       <section className="pt-16 md:pt-20 min-h-screen flex items-center ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
@@ -229,9 +263,6 @@ export default function HeadPage() {
             <div className="lg:order-2 order-1 flex justify-center relative">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[400px] lg:h-[400px]">
                 <div className="w-full h-full bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
-                  {/* <div className="w-4/5 h-4/5 bg-white rounded-full flex items-center justify-center text-6xl font-bold text-blue-600">
-                    TL
-                  </div> */}
                   <img
                     src="https://i.imghippo.com/files/lPr9151Dno.png"
                     alt="Me"
